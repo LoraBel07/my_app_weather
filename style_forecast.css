@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quantico', sans-serif;
+}
+body {
+    background-image: url(univ3.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-size: cover;
+    font-family: 'Quantico', sans-serif;
+    background-color: rgb(23, 23, 59);
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+}
+.earthHome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 380px;
+    background: url(earth-wallp.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    border-radius: 50%;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 1), 0 0 60px #4a2d64;
+    animation: animateEarth 60s linear infinite;
+}
+
+@keyframes animateEarth {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -728px 0;
+    }    
+}
+.circle {
+    transform-style: preserve-3d;
+    animation: animatePic 40s linear infinite;
+}
+img {
+    width: 150px;
+}
+.circle span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    padding: 2px 5px;
+    transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(270px);
+}
+
+@keyframes animatePic {
+    0% {
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-40px);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-40px);
+    }
+}
+.days {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+h2, h5 {
+    color: #fff;
+    align-self: center;
+    font-family: 'Quantico', sans-serif;
+    font-size: 28px;
+}
+
+
+@media all and (max-width: 800px) {
+    .earthHome {
+        width: 370px;
+        height: 370px;
+        height: intrinsic;  
+    }
+    img {
+        width: 140px;
+        height: intrinsic;  
+    }
+    .circle span {
+        transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(260px);    
+    }
+}
+
+/* Surface Duo (540) */
+@media all and (max-width: 550px) {
+    .earthHome {
+        width: 300px;
+        height: 300px;
+        height: intrinsic;  
+    }
+    img {
+        width: 100px;
+        height: intrinsic;  
+    }
+    .circle span {
+        transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(210px);    
+    }
+}
+
+/* iPhone 6/7/8 Plus (414),
+Pixel 2 XL (411 ???), Pixel 2 (411)*/
+@media all and (max-width: 420px) {
+    .earthHome {        
+        width: 180px;
+        height: 180px;
+        height: intrinsic;  
+    }
+    img {
+        width: 80px;
+        height: intrinsic;  
+    }
+    .circle span {
+        transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(140px);    
+    }
+}
+
+/* iPhone X (375), iPhone 6/7/8 (375 ???) */
+@media all and (max-width: 380px) {
+    .earthHome {        
+        width: 160px;
+        height: 160px;
+        height: intrinsic;  
+    }
+    img {
+        width: 70px;
+        height: intrinsic;  
+    }
+    .circle span {
+        transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(130px);    
+    }
+}
+/* Galaxy S5 (360),
+Moto G4 (360)*/
+@media all and (max-width: 370px) {
+    h2, h5 {
+        font-size: 20px;
+    }
+
+}
+
+/* iPhone 5/SE */
+@media all and (max-width: 320px) {
+    h2, h5 {
+        font-size: 20px;
+    }
+    .earthHome, img {
+        height: intrinsic; 
+    }
+}
+
+/* Galaxy Fold (280) */
+/* @media all and (max-width: 290px) {
+    h2, h5 {
+        font-size: 18px;
+    }
+}
+
+.earthHome {
+    top:45%;        
+    width: 140px;
+    height: 140px;
+    height: intrinsic; 
+}
+img {
+    width: 55px;
+    height: intrinsic; 
+}
+.circle span {
+    transform: rotateY(calc(var(--i) * calc(360deg / 13))) translateZ(105px);    
+} */
