@@ -18,5 +18,5 @@
 On my LinkedIn page you can see a short video demonstrating first part of my app:
 https://www.linkedin.com/feed/update/urn:li:activity:6842597674198327296/
 
-Wath my app here: 
+Watch my app here: 
 https://weather-city-app.glitch.me/
